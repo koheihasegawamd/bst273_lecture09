@@ -36,5 +36,11 @@ chars = 0
 for line in fh:
 	#print(line)  # Sanity check
 	lines += 1   # for each line, add 1 (ie, count) to the lines variable
-	words += len( line.split() )
-print("The number of lines is:", lines)
+	#print(line.split())  # .split() makes a list of words in each line
+	words += len( line.split() ) # to count the number of words, use .split() on the line, then use len() on the list that's returned
+	chars += len(line) # to count char for each line, then sum up
+
+# Output answers
+print("The number of lines is:",     lines)
+print("The number of words is",      words)
+print("The number of characters is", chars)
